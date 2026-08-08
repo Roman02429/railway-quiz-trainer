@@ -192,7 +192,7 @@ function startGame() {
         const button = createElem('button', answerText, 'btn-answer');
         button.addEventListener('click', () => checkAnswer(index, button));
         menuContainer.append(button);
-        console.log(shuffledQuestions[currentQuestionIndex].c);
+        // console.log(shuffledQuestions[currentQuestionIndex].c);
         // console.log(currentQuestionIndex);
         // console.log(currentScore);
     });
