@@ -1,5 +1,5 @@
 // БАЗА ДАННЫХ ДЛЯ ВСЕХ ЯЗЫКОВ
-import { gameQuestions } from './questions.js';
+import { gameQuestions } from 'questions.js';
 
 
 //ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ
