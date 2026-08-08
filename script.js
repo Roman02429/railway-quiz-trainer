@@ -1,6 +1,5 @@
 // БАЗА ДАННЫХ ДЛЯ ВСЕХ ЯЗЫКОВ
-import { gameQuestions } from 'questions.js';
-
+import { gameQuestions } from './questions.js';
 
 //ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ
 const container = document.querySelector('.game-root');
@@ -80,7 +79,6 @@ function createElem(tag, text, className) {
 }
 
 // ГЛАВНЫЙ ЭКРАН
-
 function renderLanguageMenu() {
     clearScreen();
 
@@ -94,7 +92,6 @@ function renderLanguageMenu() {
         menuContainer.append(button);
     }
 }
-
 
 function renderMainMenu() {
     clearScreen();
@@ -120,7 +117,6 @@ function renderMainMenu() {
 
 function startStudy() {
     clearScreen();
-    document.querySelector('.links').disabled = true
 
     const questions = gameQuestions[selectedLanguage];
     if (countStudy >= questions.length) {
@@ -192,12 +188,7 @@ function startGame() {
         const button = createElem('button', answerText, 'btn-answer');
         button.addEventListener('click', () => checkAnswer(index, button));
         menuContainer.append(button);
-        // console.log(shuffledQuestions[currentQuestionIndex].c);
-        // console.log(currentQuestionIndex);
-        // console.log(currentScore);
     });
-
-
 }
 
 function checkAnswer(index, button) {
@@ -281,6 +272,5 @@ function getGameFinalMessage(count, lang) {
         }
     }
 }
-
 
 renderLanguageMenu();
