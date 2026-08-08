@@ -23,8 +23,6 @@ html {
 
 body {
     width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
     min-height: 95dvh;
 
     background-color: #0b1022;
@@ -78,8 +76,8 @@ body {
     max-width: 700px;
 
     align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+    justify-content: center; 
+    flex-grow: 1; 
 
     margin: auto 0;
 }
@@ -394,9 +392,6 @@ body {
 @media (max-width: 480px) {
 
     .game-root {
-        min-height: 100vh;
-        min-height: 100dvh;
-
         padding: 10px 8px;
     }
 
