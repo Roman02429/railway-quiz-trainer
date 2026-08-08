@@ -31,15 +31,11 @@ body {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-
     color: #ffffff;
     font-family: Arial, sans-serif;
-
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
     overflow-y: auto;
 }
 
@@ -51,14 +47,11 @@ body {
 .game-root {
     width: 100%;
     max-width: 800px;
-
     flex: 1;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     padding: 20px 10px 30px;
 }
 
@@ -71,14 +64,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     width: 100%;
     max-width: 700px;
-
     align-items: center;
-    justify-content: center; 
-    flex-grow: 1; 
-
+    justify-content: center;
+    flex-grow: 1;
     margin: auto 0;
 }
 
@@ -91,38 +81,24 @@ body {
     width: 100%;
     max-width: 400px;
     min-height: 55px;
-
     padding: 10px 30px;
-
     background: linear-gradient(135deg,
             #10152d,
             #182246);
-
     color: #ffffff;
-
     font-family: Arial, sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
-
     border: none;
     border-radius: 0;
-
     cursor: pointer;
-
-    /*
-     * Для старых браузеров сначала задаём обычный
-     * transition, затем используем clip-path.
-     */
     transition:
         background-color 0.3s ease,
         color 0.3s ease,
         box-shadow 0.3s ease,
         transform 0.3s ease;
 
-    /*
-     * Шестигранная форма.
-     */
     clip-path: polygon(8% 0%,
             92% 0%,
             100% 50%,
@@ -132,15 +108,7 @@ body {
 
     box-shadow:
         inset 0 0 0 2px #3b4b8b;
-
-    /*
-     * Оставляем твой визуальный отступ.
-     */
     margin-bottom: 15px;
-
-    /*
-     * Улучшает перенос длинного текста.
-     */
     overflow-wrap: break-word;
 }
 
@@ -152,10 +120,8 @@ body {
 .btm-game:hover:not(:disabled) {
     background: #253368;
     color: #ffd700;
-
     box-shadow:
         inset 0 0 0 2px #ffd700;
-
     transform: scale(1.05);
 }
 
@@ -164,17 +130,11 @@ body {
    7. ФОКУС КНОПОК
    ========================================================= */
 
-/*
- * Важно для клавиатуры.
- * Пользователь должен видеть, какая кнопка выбрана.
- */
-
 .btm-game:focus-visible,
 .btn-answer:focus-visible {
     outline: 3px solid #ffd700;
     outline-offset: 3px;
 }
-
 
 /* =========================================================
    8. БЛОК ВОПРОСА
@@ -186,32 +146,20 @@ body {
     background: linear-gradient(135deg,
             #141a35,
             #1b264f);
-
     border: 2px solid #3b4b8b;
     border-radius: 20px;
-
     padding: 15px;
-
     color: #ffffff;
-
     font-family: Arial, sans-serif;
     font-size: 1.3rem;
     line-height: 1.4;
-
     text-align: center;
-
     margin-bottom: 5px;
-
     box-shadow:
         0 0 15px rgba(0, 0, 0, 0.5);
-
-    /*
-     * Длинные слова/тексты не ломают контейнер.
-     */
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
-
 
 /* =========================================================
    9. КНОПКИ ОТВЕТОВ
@@ -219,60 +167,37 @@ body {
 
 .btn-answer {
     width: 100%;
-
     min-height: 55px;
-
-    /*
-     * Сохраняем твои большие боковые отступы,
-     * чтобы текст не попадал в срезанные края.
-     */
     padding: 12px 45px;
-
     background: linear-gradient(135deg,
             #10152d,
             #182246);
-
     color: #ffffff;
-
     font-family: Arial, sans-serif;
     font-size: 1.1rem;
     font-weight: bold;
-
     line-height: 1.35;
-
     border: none;
     border-radius: 0;
-
     cursor: pointer;
-
     text-align: left;
-
     transition:
         background-color 0.3s ease,
         color 0.3s ease,
         box-shadow 0.3s ease,
         transform 0.3s ease;
-
     margin-bottom: 10px;
-
     clip-path: polygon(5% 0%,
             95% 0%,
             100% 50%,
             95% 100%,
             5% 100%,
             0% 50%);
-
     box-shadow:
         inset 0 0 0 2px #3b4b8b;
-
-    /*
-     * Очень длинные ответы не вылезают
-     * за пределы кнопки.
-     */
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
-
 
 /* =========================================================
    10. HOVER ОТВЕТОВ
@@ -280,7 +205,6 @@ body {
 
 .btn-answer:hover {
     background: #1f2a56;
-
     box-shadow:
         inset 0 0 0 2px #ffd700;
 }
@@ -292,11 +216,9 @@ body {
 
 .btn-right-answer {
     background: #28a745 !important;
-
     box-shadow:
         inset 0 0 0 2px #2eb85c,
         0 0 15px #28a745 !important;
-
     color: #ffffff !important;
 }
 
@@ -307,11 +229,9 @@ body {
 
 .btn-wrong-answer {
     background: #dc3545 !important;
-
     box-shadow:
         inset 0 0 0 2px #e4606d,
         0 0 15px #dc3545 !important;
-
     color: #ffffff !important;
 }
 
@@ -323,10 +243,8 @@ body {
 .study-container {
     width: 100%;
     max-width: 700px;
-
     display: flex;
     align-items: center;
-
     gap: 5px;
 }
 
@@ -342,18 +260,11 @@ body {
 }
 
 
-/*
- * Возвращаем обычный вид disabled-кнопки,
- * даже если курсор находится над ней.
- */
-
 .btm-game:disabled:hover {
     background: linear-gradient(135deg,
             #10152d,
             #182246);
-
     color: #ffffff;
-
     box-shadow:
         inset 0 0 0 2px #3b4b8b;
 }
@@ -402,33 +313,21 @@ body {
     .question-box {
         font-size: 1rem;
         line-height: 1.35;
-
         padding: 12px 10px;
-
         border-radius: 15px;
     }
 
     .btn-answer {
         min-height: 50px;
-
         font-size: 0.95rem;
         line-height: 1.3;
-
-        /*
-         * На маленьком экране уменьшаем боковой
-         * padding, иначе длинный ответ может
-         * переноситься слишком рано.
-         */
         padding: 11px 30px;
     }
 
     .btm-game {
         min-height: 50px;
-
         font-size: 1rem;
-
         padding: 9px 25px;
-
         margin-bottom: 10px;
     }
 
@@ -474,13 +373,6 @@ body {
 /* =========================================================
    18. УСТРОЙСТВА БЕЗ HOVER
    ========================================================= */
-
-/*
- * Телефоны не имеют нормального hover.
- * Поэтому не пытаемся делать hover-эффекты
- * обязательной частью интерфейса.
- */
-
 @media (hover: none) {
 
     .btm-game:hover:not(:disabled) {
@@ -491,7 +383,6 @@ body {
         background: linear-gradient(135deg,
                 #10152d,
                 #182246);
-
         box-shadow:
             inset 0 0 0 2px #3b4b8b;
     }
